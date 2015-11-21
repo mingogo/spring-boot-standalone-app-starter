@@ -40,8 +40,7 @@ public class SampleSimpleApplication implements CommandLineRunner {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication application = new SpringApplication(
-				SampleSimpleApplication.class);
+		SpringApplication application = new SpringApplication( SampleSimpleApplication.class);
 		application.setApplicationContextClass(AnnotationConfigApplicationContext.class);
 		SpringApplication.run(SampleSimpleApplication.class, args);
 	}
