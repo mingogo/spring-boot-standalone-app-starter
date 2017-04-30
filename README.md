@@ -1,1 +1,1 @@
-This is a a Spring boot powered standalone java applicatioin that is ready to be customized. 
+This is a a Spring boot powered standalone java application that is ready to be customized.
