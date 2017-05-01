@@ -35,7 +35,7 @@ public class SampleSimpleApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		// System.out.println(this.helloWorldService.getHelloMessage());
+		 System.out.println(this.helloWorldService.getHelloMessage());
 	}
 
 	public static void main(String[] args) throws Exception {
