@@ -1,13 +1,15 @@
-CREATE TABLE flyway_test (
-  key VARCHAR(64),
-  value VARCHAR(255),
-  PRIMARY KEY(key)
+CREATE TABLE Department
+(
+  code                    VARCHAR(255) NOT NULL PRIMARY KEY,
+  label                   VARCHAR(255),
+  description             VARCHAR(255),
+  last_modified_by        VARCHAR(20) NOT NULL DEFAULT 'SYS',
+  last_modified_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  created_by              VARCHAR(20) NOT NULL DEFAULT 'SYS',
+  created_timestamp       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-ALTER TABLE flyway_test OWNER TO postgres;
+ALTER TABLE department OWNER TO postgres;
 
-insert INTO flyway_test values ('1','test');
-insert INTO flyway_test values ('2','test2');
-insert INTO flyway_test values ('3','test3');
-insert INTO flyway_test values ('4','test4');
-insert INTO flyway_test values ('5','test5');
+insert INTO department values ('it','IT','the department to do IT','SYS',NOW(),'SYS',NOW());
+insert INTO department values ('hr','HR','the department to do HR','SYS',NOW(),'SYS',NOW());
