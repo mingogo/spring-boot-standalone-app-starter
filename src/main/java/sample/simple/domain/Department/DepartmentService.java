@@ -6,18 +6,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class DepartmentService {
 
-    private DepartmentRepository repository;
+  private DepartmentRepository repository;
 
-    @Autowired
-    public DepartmentService(DepartmentRepository repository) {
-        this.repository = repository;
-    }
+  @Autowired
+  public DepartmentService(DepartmentRepository repository) {
+    this.repository = repository;
+  }
 
-    public Iterable<Department> getAll() {
-        return repository.findAll();
-    }
+  public Iterable<Department> getAll() {
+    return repository.findAll();
+  }
 
-    public Department add(Department department) {
-        return repository.save(department);
-    }
+  public Department add(Department department) {
+    return repository.save(department);
+  }
 }

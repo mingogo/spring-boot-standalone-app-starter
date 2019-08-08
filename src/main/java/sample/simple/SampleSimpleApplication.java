@@ -24,14 +24,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootApplication
 public class SampleSimpleApplication implements CommandLineRunner {
 
-    @Override
-    public void run(String... args) {
-    }
+  @Override
+  public void run(String... args) {}
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication application = new SpringApplication(SampleSimpleApplication.class);
-        application.setApplicationContextClass(AnnotationConfigApplicationContext.class);
-        SpringApplication.run(SampleSimpleApplication.class, args);
-    }
-
+  public static void main(String[] args) throws Exception {
+    SpringApplication application = new SpringApplication(SampleSimpleApplication.class);
+    application.setApplicationContextClass(AnnotationConfigApplicationContext.class);
+    SpringApplication.run(SampleSimpleApplication.class, args);
+  }
 }
